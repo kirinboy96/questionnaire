@@ -21,17 +21,6 @@ class make_csv(object):
                 # ヘッダーを付ける
                 writer.writeheader()
 
-    # def write_csv(self,food):
-    #     """
-    #     CSVファイルに入力されたデータを書き込む
-    #     """
-    #     self.food = food
-    #     with open(self.csv_file, "a") as questionnaire_file:
-    #         fieldnames = ["Food", "Count"]
-    #         writer = csv.DictWriter(questionnaire_file, fieldnames=fieldnames)
-    #         writer.writerow({"Food": food, "Count": 1})
-    #         print("add")
-
     def load_data(self):
         """
         CSVファイルに入っているデータをdict型で返す
@@ -61,26 +50,3 @@ class make_csv(object):
         self.data[food]+=1
         self.save()
 
-# if os.path.exists(file_name):
-#     with open(file_name, "r+") as csv_file:
-#         reader = csv.DictReader(csv_file)
-#         for row in reader:
-#             print(row['Food'])
-#             if row["Food"] == food:
-#                 row["Count"] = int(row['Count']) + 1
-#                 print(name + "さん、ありがとうございました\n"
-#                              "良い1日を！！さようなら")
-#                 exit(0)
-#
-#     with open(file_name, "a") as csv_file:
-#         fieldnames = ["Food", "Count"]
-#         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-#         writer.writerow({"Food": food, "Count": 1})
-#         print("add")
-# else:
-#     with open(file_name, "w") as csv_file:
-#         fieldnames = ["Food", "Count"]
-#         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-#         writer.writeheader()
-#         writer.writerow({"Food": food, "Count": 1})
-#         print("new")
