@@ -17,7 +17,7 @@ class make_csv(object):
             pathlib.Path(csv_file).touch()
             with open(self.csv_file,"w") as qustion_file:
                 fieldnames = ["Food", "Count"]
-                writer = csv.DictWriter(qustion_file, fieldnames=fieldnames)
+                writer = csv.DictWriter(qustion_file, fieldnames=self.column)
                 # ヘッダーを付ける
                 writer.writeheader()
 
@@ -44,7 +44,7 @@ class make_csv(object):
                     'Food': food,
                     'Count': count
                 })
-
+                
     def increase(self,food):
         self.data[food]+=1
         self.save()
