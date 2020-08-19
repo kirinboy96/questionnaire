@@ -1,5 +1,5 @@
-from models.human import People
-from models.making_csv import make_csv
+from human import People
+from making_csv import make_csv
 
 file_name = "foodie.csv"
 
